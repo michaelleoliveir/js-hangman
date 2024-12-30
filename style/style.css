@@ -1,0 +1,58 @@
+@import url('https://fonts.cdnfonts.com/css/lexend');
+
+:root {
+    --background: #8D0B41;
+    --background-clean: #D6CFB4;
+    --titles: #FFF8E6;
+    --letters: #D39D55
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Lexend', sans-serif;
+    background-color: var(--background);
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    margin-top: 1.2rem;
+    text-align: center;
+}
+
+#title {
+    color: var(--titles);
+    margin: 1.5rem;
+}
+
+#button-reset {
+    padding: 6px;
+    border-radius: 9px;
+    color: var(--background);
+    background-color: var(--background-clean);
+    font-weight: 800;
+}
+
+#button-reset:hover {
+    color: var(--letters);
+    background-color: var(--background-clean);
+}
+
+main {
+    display: flex;
+
+}
+
+#forca-imagem {
+    height: 17rem;
+    width: 17rem;
+}
+
