@@ -1,5 +1,9 @@
 @import url('https://fonts.cdnfonts.com/css/lexend');
 
+.swal-title, .swal-footer, .swal-text, .swal-icon, .swal-icon--success__ring {
+    background-color: white;
+}
+
 :root {
     --background: #8D0B41;
     --background-clean: #D6CFB4;
@@ -11,26 +15,26 @@
     margin: 0px;
     padding: 0px;
     font-family: 'Lexend', sans-serif;
-    background-color: var(--background);
+    background-color: var(--background-clean);
 }
 
 body {
     display: flex;
     height: 100vh;
+    width: 100%;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 header{
-    position: fixed;
-    top: 0;
     margin-top: 1.2rem;
     text-align: center;
 }
 
 #title {
-    color: var(--titles);
-    margin: 1.5rem;
+    color: var(--background);
+    margin: 0.5rem 0rem 0.6rem 0rem;
 }
 
 #button-reset {
@@ -42,17 +46,89 @@ header{
 }
 
 #button-reset:hover {
-    color: var(--letters);
-    background-color: var(--background-clean);
+    background-color: var(--background);
+    color: var(--background-clean);
 }
 
 main {
     display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    height: auto;
 
+}
+
+#forca {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    margin-top: 2.5rem;
 }
 
 #forca-imagem {
-    height: 17rem;
-    width: 17rem;
+    height: 15rem;
+    width: 15rem;
+    margin-top: 2rem;
 }
 
+#word-display {
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.letter-space {
+    padding: 5px;
+    font-size: 30px;
+}
+
+#keyboard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 1.5rem;
+}
+
+.keyboard-button {
+    padding: 0.8rem;
+    margin: 0.3rem;
+    border-radius: 8px;
+    background-color: var(--background);
+    color: var(--background-clean);
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.keyboard-button:hover {
+    background-color: var(--background-clean);
+    color: var(--background);
+}
+
+@media(max-width: 500px) {    
+    .keyboard-button {
+        margin: 0.3rem;
+    }
+}
+
+@media(max-width: 480px) {    
+    .keyboard-button {
+        padding: 0.6rem;
+        margin: 0.3rem;
+    }
+}
+
+@media(max-width: 420px) {    
+    .keyboard-button {
+        padding: 0.6rem;
+        margin: 0.2rem;
+    }
+}
+
+@media(max-width: 380px) {    
+    .keyboard-button {
+        padding: 0.6rem;
+        margin: 0.16rem;
+    }
+}
