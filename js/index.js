@@ -188,5 +188,17 @@ function reset() {
 const botaoReiniciar = document.getElementById("button-reset")
 botaoReiniciar.addEventListener("click", () => reset())
 
+document.addEventListener("DOMContentLoaded", () => {
+    if(!localStorage.getItem("primeiraEntrada")) {
+        var modal = new bootstrap.Modal(document.querySelector(".modal"), {
+            keyboard: false
+        });
+
+        modal.show();
+
+        localStorage.setItem("primeiraEntrada", "false");
+    }
+})
+
 gerarTeclado();
 gerarPalavra();
