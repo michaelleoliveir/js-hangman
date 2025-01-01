@@ -2,57 +2,53 @@ let palavra = "";
 let erros = 0;
 
 const listaPalavras = [
-    "JAVASCRIPT",
-    "FRONTEND",
-    "BACKEND",
-    "ALGORITMO",
-    "REACT",
-    "NODEJS",
-    "HTML",
-    "CSS",
-    "JAVA",
-    "TYPESCRIPT",
-    "NATIVE",
-    "GIT",
-    "GITHUB",
-    "API",
-    "FRAMEWORK",
-    "DEPLOY",
-    "DEBUG",
-    "FULLSTACK",
-    "SQL",
-    "PYTHON",
-    "ANGULAR",
-    "VUE",
-    "SASS",
-    "BOOTSTRAP",
-    "DOCKER",
-    "LINUX",
-    "TERMINAL",
-    "SHELL",
-    "FLUTTER",
-    "SPRING",
-    "MONGODB",
-    "JQUERY",
-    "VSCODE",
-    "MYSQL",
-    "CLOUD",
-    "FIREBASE",
-    "JSON",
-    "REST",
-    "AJAX",
-    "DEVOPS",
-    "CACHE",
-    "NPM",
-    "PROXY",
-    "HTTPS",
-    "PHP",
-    "RUBY",
-    "C",
-    "KOTLIN",
-    "SWIFT",
-    "ANDROID",
-    "IOS",
+    "ALGORITHM",
+    "COMPILER",
+    "INTERPRETER",
+    "SOFTWARE",
+    "HARDWARE",
+    "PROGRAMMING",
+    "DATABASE",
+    "JWT",
+    "CLIENT",
+    "CONTROLLER",
+    "MODEL",
+    "VIEW",
+    "FUNCTION",
+    "VARIABLE",
+    "CONSTANT",
+    "ARRAY",
+    "OBJECT",
+    "CLASS",
+    "METHOD",
+    "INTERFACE",
+    "ASYNC",
+    "PROMISE",
+    "FETCH",
+    "CALLBACK",
+    "THREAD",
+    "STACK",
+    "QUEUE",
+    "SYNTAX",
+    "LIBRARY",
+    "FRAMEWORKS",
+    "BINARY",
+    "DEBUGGING",
+    "AGILE",
+    "SCRUM",
+    "KANBAN",
+    "UML",
+    "SPRINT",
+    "NETWORK",
+    "FIREWALL",
+    "DOMAIN",
+    "VPN",
+    "IP",
+    "MASK",
+    "BRANCH",
+    "MERGE",
+    "COMMIT",
+    "TAG",
 ];
 
 // função para gerar a palavra aleatória que será adivinhada
@@ -66,6 +62,7 @@ function gerarTeclado() {
     const teclado = ["QWERTYUIOP", "ASDFGHJKL", "ZXCVBNM"];
 
     let keyboard = document.getElementById("keyboard");
+    keyboard.innerHTML = ""
 
     // para cada item da array (linha)
     teclado.forEach((row) => {
@@ -80,7 +77,13 @@ function gerarTeclado() {
 
             linhaTeclado.appendChild(botao);
 
-            botao.addEventListener("click", () => manipularValor(letter));
+            botao.addEventListener("click", () => {
+                manipularValor(letter)
+
+                botao.style.backgroundColor = "#FFF8E6"
+                botao.style.color = "#8D0B41"
+                botao.disabled = true
+            });
         });
 
         keyboard.appendChild(linhaTeclado);
@@ -110,7 +113,7 @@ function manipularValor(letter) {
         const spans = document.querySelectorAll(".letter-space")
         const secretWord = Array.from(spans).map((span) => span.innerText).join('');
 
-        if(secretWord === palavra) {
+        if (secretWord === palavra) {
             swal({
                 title: "Parabéns!",
                 text: "Você adivinhou a palavra secreta.",
@@ -123,6 +126,7 @@ function manipularValor(letter) {
     }
 }
 
+// função para atualizar o espaço da palavra secreta
 function atualizarDisplay(letter) {
     const span = document.querySelectorAll(".letter-space");
 
@@ -152,7 +156,7 @@ function atualizarForca() {
     } else {
         swal({
             title: "Tente novamente",
-            text: "Você já usou todas as suas chances",
+            text: `A palavra secreta era ${palavra}`,
             icon: "error",
         });
 
@@ -160,6 +164,7 @@ function atualizarForca() {
     }
 }
 
+// função para reiniciar o jogo
 function reset() {
     palavra = "";
     erros = 0;
@@ -170,7 +175,14 @@ function reset() {
     const keyboard = document.getElementById("word-display")
     keyboard.innerHTML = ""
 
+    const botoesTeclado = document.getElementsByClassName("keyboard-button")
+    Array.from(botoesTeclado).forEach((botao) => {
+        botao.style.backgroundColor = "#8D0B41"
+        botao.style.color = "#D6CFB4"
+    })
+
     gerarPalavra()
+    gerarTeclado()
 }
 
 const botaoReiniciar = document.getElementById("button-reset")
