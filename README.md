@@ -7,8 +7,7 @@ Um jogo clássico da forca desenvolvido com HTML, CSS e JavaScript. Desafie-se a
 ## 📌 Funcionalidades
 - Escolha de palavras aleatórias.
 - Interface interativa e responsiva.
-- Exibição das letras corretas e incorretas.
-- Contagem de tentativas restantes.
+- Exibição das letras selecionadas.
 - Mensagens de vitória ou derrota.
 
 
