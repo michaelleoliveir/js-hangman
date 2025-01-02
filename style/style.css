@@ -105,6 +105,11 @@ main {
     color: var(--background);
 }
 
+#botao-jogar {
+    background-color: var(--background);
+    color: var(--background-clean);
+}
+
 @media(max-width: 500px) {    
     .keyboard-button {
         margin: 0.3rem;

@@ -137,6 +137,7 @@ function atualizarDisplay(letter) {
     });
 }
 
+// função para atualizar a imagem da forca caso o usuário falar a letra errada
 function atualizarForca() {
     const imagens = [
         "assets/images/img1.png",
@@ -189,15 +190,18 @@ const botaoReiniciar = document.getElementById("button-reset")
 botaoReiniciar.addEventListener("click", () => reset())
 
 document.addEventListener("DOMContentLoaded", () => {
-    if(!localStorage.getItem("primeiraEntrada")) {
-        var modal = new bootstrap.Modal(document.querySelector(".modal"), {
-            keyboard: false
-        });
+    var modal = new bootstrap.Modal(document.querySelector(".modal"), {
+        keyboard: false,
+        backdrop: "static"
+    });
 
-        modal.show();
+    modal.show();
+})
 
-        localStorage.setItem("primeiraEntrada", "false");
-    }
+const botaoIniciar = document.getElementById("botao-jogar")
+botaoIniciar.addEventListener("click", () => {
+    const modalInicio = document.querySelector(".modal");
+    $(modalInicio).modal("hide")
 })
 
 gerarTeclado();

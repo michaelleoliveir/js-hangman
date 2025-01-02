@@ -37,26 +37,23 @@
         </div>
     </main>
 
-    <div class="modal" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
+    <div class="modal fade" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered" role="document" data-backdrop="static">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title">Regras do Jogo</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
                 </div>
                 <div class="modal-body">
                     <p>Bem-vindo ao jogo da Forca! Aqui estão as regras:</p>
                     <ul>
-                        <li>O objetivo é adivinhar a palavra secreta dentro do tema de <b>TECNOLOGIA<b>.</li>
+                        <li>O objetivo é adivinhar a palavra secreta dentro do tema de <b style="color: #8D0B41;">TECNOLOGIA</b>.</li>
                         <li>Você pode cometer até 6 erros antes de perder.</li>
                         <li>Clique nas letras para adivinhar.</li>
                         <li>Boa sorte!</li>
                     </ul>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Jogar</button>
+                    <button type="button" class="btn btn-primary" id="botao-jogar">Jogar</button>
                 </div>
             </div>
         </div>
@@ -66,6 +63,7 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha384-UG8ao2jwOWB7/oDdObZc6ItJmwUkR/PfMyt9Qs5AwX7PsnYn1CRKCTWyncPTWvaS" crossorigin="anonymous"></script>
 </body>
 
 </html>
