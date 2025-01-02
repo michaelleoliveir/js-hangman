@@ -15,6 +15,7 @@
     margin: 0px;
     padding: 0px;
     font-family: 'Lexend', sans-serif;
+    box-sizing: border-box;
 }
 
 body {
@@ -139,14 +140,37 @@ main {
 
 @media(max-width: 380px) {    
     .keyboard-button {
-        padding: 0.5rem;
-        margin: 0.15rem;
+        padding: 0.45rem;
+        margin: 0.12rem;
     }
 }
 
-@media(max-width: 320px) {
+@media(max-width: 300px) {
     .keyboard-button {
-        padding: 0.5rem;
+        padding: 0.4rem;
         margin: 0.1rem;
+        font-size: 0.8rem;
+    }
+
+    #forca-imagem {
+        width: 13rem;
+        height: 13rem;
+    }
+}
+
+@media(max-width: 160px) {    
+    .keyboard-button {
+        padding: 0.4rem;
+        margin: 0.15rem;
+        font-size: 14px;
+    }
+
+    #forca-imagem {
+        width: 12rem;
+        height: 12rem;
+    }
+
+    #word-display {
+        margin-top: 0.5rem;
     }
 }
