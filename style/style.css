@@ -16,6 +16,7 @@
     padding: 0px;
     font-family: 'Lexend', sans-serif;
     box-sizing: border-box;
+    overflow-y: hidden;
 }
 
 body {
@@ -34,7 +35,7 @@ header{
 
 #title {
     color: var(--background);
-    margin: 0.3rem 0rem 0.5rem 0rem;
+    margin: 1.5rem 0rem 0.5rem 0rem;
     font-size: 32px;
 }
 
@@ -53,7 +54,7 @@ main {
     flex-direction: column;
     height: auto;
 
-    margin-top: 15px;
+    margin-top: 1rem;
 }
 
 #forca {
@@ -163,11 +164,11 @@ main {
     }
 }
 
-@media(max-width: 160px) {    
+@media(min-width: 160px) {    
     .keyboard-button {
-        padding: 0.4rem;
+        padding: 0.55rem;
         margin: 0.15rem;
-        font-size: 14px;
+        font-size: 15px;
     }
 
     #forca-imagem {
